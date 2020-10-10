@@ -1,5 +1,7 @@
 # StateMan
 
+<p align='center'><img src='https://raw.githubusercontent.com/mattfbacon/stateman/main/logo.svg' alt='Logo'></p>
+
 A tiny explicit state manager. No dependencies and only 92 SLOCs (3157 bytes minified) according to Al Danial's `cloc` utility.
 
 The purpose of StateMan is to manage state with explicit bindings for changes. In other similar state frameworks, the dependencies are automatically detected. The goal of StateMan is to avoid unexpected updates based on dependency detection that thinks too highly of itself. StateMan requires the user to provide the dependencies explicitly, so every update is expected.
