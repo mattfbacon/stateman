@@ -83,7 +83,6 @@ class StateMan:
 		else:
 			for prop in props:
 				value = props[prop]
-				print(value, StateMan._is_dynamic_prop_definition(value))
 				if StateMan._is_dynamic_prop_definition(value): self.track_dynamic(prop, *value)
 				else: self.track_static(prop, value)
 
@@ -165,7 +164,6 @@ class StateMan:
 		if item in self.static_props: return self.static_props[item]
 		elif item in self.dynamic_props:
 			if item in self.nocache:
-				print('nocache for prop')
 				return self.dynamic_props[item][0](self)
 			else:
 				if item not in self.cache: self.cache[item] = self.dynamic_props[item][0](self)

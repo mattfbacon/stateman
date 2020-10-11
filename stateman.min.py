@@ -11,7 +11,7 @@ class StateMan:
 		if literal:A.static_props=C;A.dependents={A:[]for(A,B)in C}
 		else:
 			for D in C:
-				B=C[D];print(B,StateMan._is_dynamic_prop_definition(B))
+				B=C[D]
 				if StateMan._is_dynamic_prop_definition(B):A.track_dynamic(D,*B)
 				else:A.track_static(D,B)
 	def bind(B,prop_or_props,handler):
@@ -46,7 +46,7 @@ class StateMan:
 		B=item
 		if B in A.static_props:return A.static_props[B]
 		elif B in A.dynamic_props:
-			if B in A.nocache:print('nocache for prop');return A.dynamic_props[B][0](A)
+			if B in A.nocache:return A.dynamic_props[B][0](A)
 			else:
 				if B not in A.cache:A.cache[B]=A.dynamic_props[B][0](A)
 				return A.cache[B]
