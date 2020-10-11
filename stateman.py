@@ -177,7 +177,7 @@ class StateMan:
 		This method does not prune the list for duplicates, but if they are pruned (with `list(dict.fromkeys(result))` to preserve order), they will be in the
 		proper order so that if the properties are updated according to the list order, any property will have had all of its dependencies updated by the time
 		it is reached.'''
-		return reduce(lambda a, b: a + b, [self._walk_deps(dependent) for dependent in self.dependents[item]], initial=[item])
+		return reduce(lambda a, b: a + b, [self._walk_deps(dependent) for dependent in self.dependents[item]], [item])
 
 	def _handle_change(self, item):
 		'''Internal method to trigger bindings for a property and all its dependencies. May be used externally to force an update.\n

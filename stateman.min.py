@@ -51,7 +51,7 @@ class StateMan:
 				if B not in A.cache:A.cache[B]=A.dynamic_props[B][0](A)
 				return A.cache[B]
 		else:A.__missing__(B)
-	def _walk_deps(A,item):return reduce(lambda a,b:a+b,[A._walk_deps(B)for B in A.dependents[item]],initial=[item])
+	def _walk_deps(A,item):return reduce(lambda a,b:a+b,[A._walk_deps(B)for B in A.dependents[item]],[item])
 	def _handle_change(A,item):
 		D=list(dict.fromkeys(A._walk_deps(item)))
 		for B in D:
