@@ -35,7 +35,7 @@ At the moment there is no way to "delete" a property, binding, or dependency, si
 The documentation is in the form of docstrings in `stateman.py`.
 
 To use StateMan in a project, copy `stateman.min.py` to your project directory. I suggest renaming it to `stateman.py`.    
-Note that StateMan can only be used without express permission in open-source projects. If you want to use it in closed-source/proprietary software,
+Note that StateMan can only be used without express permission in open-source projects. If you want to use it in closed-source/proprietary software, you can contact me and we can arrange something.
 
 ## License
 
