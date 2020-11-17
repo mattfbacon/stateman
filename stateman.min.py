@@ -59,7 +59,7 @@ class StateMan:
 		for B in D:
 			for C in A.global_bindings:C('changed',A,B)
 			if B in A.bindings:
-				for C in A.bindings[item]:C(A,B)
+				for C in A.bindings[B]:C(A,B)
 	def __setitem__(A,item,value):
 		C=value;B=item
 		if B in A.dynamic_props:

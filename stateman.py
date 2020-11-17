@@ -191,7 +191,7 @@ class StateMan:
 		for prop in deps:
 			for handler in self.global_bindings: handler('changed', self, prop)
 			if prop in self.bindings:
-				for handler in self.bindings[item]: handler(self, prop)
+				for handler in self.bindings[prop]: handler(self, prop)
 
 	def __setitem__(self, item, value):
 		if item in self.dynamic_props:
